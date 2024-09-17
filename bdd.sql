@@ -14,7 +14,6 @@ CREATE TABLE Perfiles (
 
 
 
-
 CREATE TABLE Disponibilidad (
     DisponibilidadID INT AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(50) UNIQUE
@@ -108,14 +107,6 @@ CREATE TABLE Inventario (
     FOREIGN KEY (AntiguedadID) REFERENCES Antiguedades(AntiguedadID)
 );
 
-
-
-
--- Insertar datos en las tablas de referencia
-INSERT INTO Roles (Nombre) VALUES ('vendedor'), ('comprador'), ('administrador');
-INSERT INTO Disponibilidad (Nombre) VALUES ('en venta'), ('vendido'), ('retirado');
-INSERT INTO MetodoPago (Nombre) VALUES ('tarjeta'), ('transferencia'), ('efectivo');
-INSERT INTO TipoActividad (Nombre) VALUES ('venta'), ('compra'), ('consulta');
 
 
 -- Procedimientos almacenados
